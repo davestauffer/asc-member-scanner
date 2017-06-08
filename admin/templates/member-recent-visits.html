@@ -2,24 +2,44 @@
 <div class="mt-actions">
     <div class="mt-action">
         <div class="mt-action-img">
-            <img src="<% MEMBER_PICTURE_C %>"> </div>
+            <img src="<?php echo $member['MEMBER_PICTURE__C']; ?>"> </div>
         <div class="mt-action-body">
             <div class="mt-action-row">
-                <div class="mt-action-info ">
-                    <div class="mt-action-details ">
-                        <span class="mt-action-author"><!--<% MEMBER_FIRST_NAME_C %> <% MEMBER_LAST_NAME_C %>--></span>
-                        <p class="mt-action-desc">Status: <!--<% Status %>--></p>
-                    </div>
+                <div class="mt-action-datetime ">
+                    <p class="mt-action-desc">Check In:
+                    <span class="mt-action-date">6/3/2017<!--<% VISIT_DATE %>--></span>
+                    <span class="mt=action-time">09:45:32 AM<!--<% VISIT_TIME %>--></span>
+                    </p>
                 </div>
                 <div class="mt-action-datetime ">
-                    <span class="mt-action-date"><!--<% VISIT_DATE %>--></span>
-                    <span class="mt=action-time"><!--<% VISIT_TIME %>--></span>
+                    <p class="mt-action-desc">Check Out:
+                        <span class="mt-action-date">6/3/2017<!--<% VISIT_DATE %>--></span>
+                        <span class="mt=action-time">09:45:32 AM<!--<% VISIT_TIME %>--></span>
+                    </p>
+                </div>
+                <div class="mt-action-buttons ">
+                    <button type="button" class="btn green-haze btn-outline sbold uppercase">Edit</button>
+                </div>
+            </div>
+            <div class="mt-action-row">
+                <div class="mt-action-datetime ">
+                    <p class="mt-action-desc">Check In:
+                        <span class="mt-action-date">6/3/2017<!--<% VISIT_DATE %>--></span>
+                        <span class="mt=action-time">09:45:32 AM<!--<% VISIT_TIME %>--></span>
+                    </p>
+                </div>
+                <div class="mt-action-datetime ">
+                    <p class="mt-action-desc">Check Out:
+                        <span class="mt-action-date">6/3/2017<!--<% VISIT_DATE %>--></span>
+                        <span class="mt=action-time">09:45:32 AM<!--<% VISIT_TIME %>--></span>
+                    </p>
                 </div>
                 <div class="mt-action-buttons ">
                     <button type="button" class="btn green-haze btn-outline sbold uppercase">Edit</button>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <!-- END RECENT VISITS -->

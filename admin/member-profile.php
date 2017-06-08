@@ -6,6 +6,18 @@
  * Time: 4:52 PM
  */
 
+
+require "../config/config.php";
+require "php/class.database.php";
+
+$db = new \ArchStreet\Database();
+$db->query("select * from members where id = :id");
+$db->bind(':id',1);
+$member = $db->single();
+var_dump($member);
+
+//$Memberid = $member['MemberId'];
+
 include_once "templates/doctype.html";
 include_once "templates/member-profile-head.html";
 ?>
@@ -29,36 +41,8 @@ include_once "templates/member-profile-head.html";
                                 <?php
                                     include_once "templates/member-profile-sidebar.html";
                                 ?>
-                                <!-- BEGIN PROFILE CONTENT -->
+                                <!-- BEGIN RECENT VISITS -->
                                 <div class="profile-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="portlet light ">
-                                                <div class="portlet-title tabbable-line">
-                                                    <div class="caption caption-md">
-                                                        <i class="icon-globe theme-font hide"></i>
-                                                        <span class="caption-subject font-blue-madison bold uppercase">Member Account</span>
-                                                    </div>
-                                                    <ul class="nav nav-tabs">
-                                                        <li class="active">
-                                                            <a href="#tab_1_1" data-toggle="tab">Member Info</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab_1_2" data-toggle="tab">Change Picture</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="portlet-body">
-                                                    <div class="tab-content">
-                                                        <?php
-                                                            include_once "templates/member-personal-info-tab.html";
-                                                            include_once "templates/member-change-avatar-tab.html";
-                                                        ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="portlet light bordered">
@@ -79,7 +63,7 @@ include_once "templates/member-profile-head.html";
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="tab_actions_pending">
                                                             <?php
-                                                                include_once "templates/member-recent-visits.html";
+                                                            include_once "templates/member-recent-visits.html";
                                                             ?>
                                                         </div>
                                                     </div>
@@ -89,8 +73,8 @@ include_once "templates/member-profile-head.html";
                                         <!-- END QUICK ACTIONS -->
                                     </div>
                                 </div>
+                                <!-- END RECENT VISITS -->
                             </div>
-                            <!-- END PROFILE CONTENT -->
                         </div>
                     </div>
                 </div>

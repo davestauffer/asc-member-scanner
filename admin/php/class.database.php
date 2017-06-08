@@ -1,6 +1,7 @@
 <?php
 
 namespace ArchStreet;
+use PDO;
 
 class Database {
 

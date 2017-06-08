@@ -4,13 +4,43 @@
     <div class="portlet light profile-sidebar-portlet ">
         <!-- SIDEBAR USERPIC -->
         <div class="profile-userpic">
-            <img src="<!--<% MEMBER_PICTURE_C %>-->" class="img-responsive" alt=""> </div>
+            <img src="<?php echo $member['MEMBER_PICTURE__C']; ?>" class="img-responsive" alt=""> </div>
         <!-- END SIDEBAR USERPIC -->
         <!-- SIDEBAR USER TITLE -->
         <div class="profile-usertitle">
-            <div class="profile-usertitle-name"> <!--<% MEMEBER_FIRST_NAME_C %> <% MEMBER_LAST_NAME_C %>--> </div>
+            <div class="profile-usertitle-name"><?php echo $member['MEMBER_FIRST_NAME__C']," ",$member['MEMBER_LAST_NAME__C']; ?> </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
+        <!-- BEGIN PROFILE CONTENT -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portlet light ">
+                    <div class="portlet-title tabbable-line">
+                        <div class="caption caption-md">
+                            <i class="icon-globe theme-font hide"></i>
+                            <span class="caption-subject font-blue-madison bold uppercase">Member Account</span>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#tab_1_1" data-toggle="tab">Member Info</a>
+                            </li>
+                            <li>
+                                <a href="#tab_1_2" data-toggle="tab">Change Picture</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="tab-content">
+                            <?php
+                                                            include_once "templates/member-personal-info-tab.html";
+                                                            include_once "templates/member-change-avatar-tab.html";
+                                                        ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PROFILE CONTENT -->
     </div>
     <!-- END PORTLET MAIN -->
 

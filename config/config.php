@@ -1,10 +1,12 @@
 
 <?php
 
-define('DBNAME', 'archstreetcenterscanner');
-define('DBUSER', 'dbudevdata');
-define('DBPASS', 'QFoSMG5SNpe0peLd');
 define('DBHOST', 'localhost');
+define('DBNAME', 'archstreetcenterscanner');
+//define('DBUSER', 'dbarchstreet');
+define('DBUSER', 'root');
+// old define('DBPASS', 'QFoSMG5SNpe0peLd');
+define('DBPASS', 'c0Xg$R6#xoi3');
 define('DBCHAR', 'utf8');
 define('VHROOT', 'D:\creg docs\Git Projects\PHP Arch Street\admin');
 //define('DOCSROOT', VHROOT . '/docs');

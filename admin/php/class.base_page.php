@@ -943,7 +943,7 @@ abstract class BasePage {
         return $strF;
     }
 
-    public function getPage() {
+    public static function getPage($body) {
         
     }
 

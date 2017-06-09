@@ -15,6 +15,7 @@ define('VHROOT', 'D:\creg docs\Git Projects\PHP Arch Street\admin');
 //define('DOCSROOT', VHROOT . '/docs');
 define('WSROOT', VHROOT . '/httpdocs');
 define('ERRORLOGS', WSROOT . '/logs');
+define('PHOTOS', WSROOT . '/photos');
 define('SGROOT', WSROOT . '/php');
 define('WSPATH', '');
 define('CKNAME', 'xsession');

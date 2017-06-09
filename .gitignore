@@ -1,3 +1,9 @@
-/admin/nbproject/private/
-/project/nbproject/private/
-/project/asc-member-scanner/nbproject/private/
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen

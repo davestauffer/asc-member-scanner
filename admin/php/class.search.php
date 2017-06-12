@@ -23,9 +23,14 @@ class Search {
     public function SearchMember($search) {
         // .  I have the form created and need a php file that executes the search on submit.  Is that something you could write up quick?  I'd like it to return the following for matches.
 
-        $q = "SELECT m.*, MEMBER_FIRST_NAME__C as fname,  MEMBER_LAST_NAME__C as lname, c.ckin, c.ckout
+//        $q = "SELECT m.*, MEMBER_FIRST_NAME__C as fname,  MEMBER_LAST_NAME__C as lname, c.ckin, c.ckout
+//              FROM members m
+//              LEFT OUTER JOIN (SELECT MAX(CheckIn) as ckin, MAX(CheckOut) as ckout, MemberId FROM scans ) c ON c.MemberId = m.memberid
+//              WHERE MEMBER_FIRST_NAME__C  LIKE :search
+//              OR MEMBER_LAST_NAME__C LIKE :search
+//              ORDER BY MEMBER_LAST_NAME__C";
+         $q = "SELECT m.*, MEMBER_FIRST_NAME__C as fname,  MEMBER_LAST_NAME__C as lname
               FROM members m
-              LEFT OUTER JOIN (SELECT MAX(CheckIn) as ckin, MAX(CheckOut) as ckout, MemberId FROM scans ) c ON c.MemberId = m.memberid
               WHERE MEMBER_FIRST_NAME__C  LIKE :search
               OR MEMBER_LAST_NAME__C LIKE :search
               ORDER BY MEMBER_LAST_NAME__C";

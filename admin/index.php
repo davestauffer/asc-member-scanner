@@ -58,7 +58,7 @@ ob_start();
                     <?php
                     foreach ($results as $row) {
                         
-                        $picName =  $row['memberid'] . 'jpg';
+                        $picName =  $row['MemberId'] . 'jpg';
                         $photo = file_exists(PHOTOS . '/' .$picName) ? $picName : 'noPhoto.jpg';
                         ?>
 
